@@ -20,8 +20,7 @@ function sumRecursion(lst) {
   if (lst.length === 0) {
     return 0;
   }
-  const first = lst.shift();
-  return first + sumRecursion(lst);
+  return lst[0] + sumRecursion(lst.slice(1, lst.length));
 }
 
 function sumTheSimpleWay(lst) {
