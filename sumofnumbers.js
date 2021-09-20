@@ -1,36 +1,34 @@
-function sumFor (lst) {
-  let sum = 0
+function sumFor(lst) {
+  let sum = 0;
   for (let i = 0; i < lst.length; i++) {
-    sum += lst[i]
+    sum += lst[i];
   }
-  return sum
+  return sum;
 }
 
-function sumWhile (lst) {
-  let i = 0
-  let sum = 0
+function sumWhile(lst) {
+  let i = 0;
+  let sum = 0;
   while (i < lst.length) {
-    sum += lst[i]
-    i++
+    sum += lst[i];
+    i++;
   }
-  return sum
+  return sum;
 }
 
-function sumRecursion (lst) {
+function sumRecursion(lst) {
   if (lst.length === 0) {
-    return 0
+    return 0;
   }
-  else {
-    let first = lst.shift()
-    return first + sumRecursion(lst)
-  }
+  const first = lst.shift();
+  return first + sumRecursion(lst);
 }
 
-function sumTheSimpleWay (lst) {
-  return _.reduce(lst, function(memo, num){ return memo + num; }, 0);
+function sumTheSimpleWay(lst) {
+  return _.reduce(lst, function (memo, num) { return memo + num; }, 0);
 }
-let testlist = [1, 2, 3, 4]
-console.log(sumFor(testlist))
-console.log(sumWhile(testlist))
-console.log(sumRecursion(testlist))
-console.log(sumTheSimpleWay(testlist))
+const testlist = [1, 2, 3, 4];
+console.log(sumFor(testlist));
+console.log(sumWhile(testlist));
+console.log(sumRecursion(testlist));
+console.log(sumTheSimpleWay(testlist));
